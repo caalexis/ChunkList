@@ -7,7 +7,12 @@
 // Default Constructor
 template<class T>
 ChunkList<T>::ChunkList() {
-
+    head = nullptr;
+    tail = nullptr;
+    iterNode = nullptr;
+    arrPos = 0;
+    listLen = 0;
+    numChunks = 0;
 }
 
 // Parameterized Constructor
