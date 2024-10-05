@@ -163,13 +163,41 @@ bool ChunkList<T>::Contains(T value) {
 // GetIndex function
 template<class T>
 T ChunkList<T>::GetIndex(int i) {
+    // Check for out of bounds
+    if (i < 0 || i >= listLen) {
+        throw IndexOutOfBounds();
+    }
 
+    Node* current = head;
+    int index = i;
+
+    // Look to find node
+    while (current != nullptr) {
+        // Case 1: In bounds, search
+        if (index < current->len) {
+            return current->values[index];
+        }
+        index -= current->len;
+        current = current->next;
+    }
+
+    // Case 2: No value, error
+    throw IndexOutOfBounds();
 }
 
 // ResetIterator function
 template<class T>
 void ChunkList<T>::ResetIterator() {
-
+    // Case 1: Empty list
+    if (IsEmpty()) {
+        iterNode = nullptr;
+        arrPos = 0;
+    }
+    // Case 2: List not empty
+    else {
+        iterNode = head;
+        arrPos = 0;
+    }
 }
 
 // GetNextItem function
