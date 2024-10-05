@@ -157,8 +157,22 @@ double ChunkList<T>::LoadFactor() {
 // Contains function
 template<class T>
 bool ChunkList<T>::Contains(T value) {
+    Node* current = head;
 
+    while (current != nullptr) {
+        // Case 1: Element is in current node
+        for (int i = 0; i < current->len; i++) {
+            if (current->values[i] == value) {
+                return true;  // element found
+            }
+        }
+        current = current->next;
+    }
+
+    // Case 2: Element is not found in any node
+    return false;
 }
+
 
 // GetIndex function
 template<class T>
