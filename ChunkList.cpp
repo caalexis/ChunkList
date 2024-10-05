@@ -30,8 +30,29 @@ ChunkList<T>::~ChunkList() {
 // Append function
 template<class T>
 void ChunkList<T>::Append(T value) {
+    // Check to see if full or empty
+    if (tail == nullptr || tail->len == ARRAY_SIZE) {
+        // initalize node
+        Node* newNode = new Node();
+        newNode->len = 0;
+        newNode->next = nullptr;
 
+        // Case: tail already there
+        if (tail != nullptr) {
+            tail->next = newNode;
+        } else {
+            // Case : List is empty
+            head = newNode;
+        }
+
+        // Set tail as new node and update
+        tail = newNode;
+        numChunks++;
+    }
+    tail->values[tail->len++] = value; // Add val to current tail of chunk
+    listLen++;
 }
+
 
 // Remove function
 template<class T>
@@ -48,7 +69,7 @@ int ChunkList<T>::GetLength() {
 // LoadFactor function
 template<class T>
 double ChunkList<T>::LoadFactor() {
-    return listLen / (numChunks * ARRAY_SIZE * 1.0);
+    return listLen / (numChunks * ARRAY_SIZE * 1.0); // evaluated as double, will return floating point
 }
 
 // Contains function
