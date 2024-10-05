@@ -95,8 +95,52 @@ void ChunkList<T>::Append(T value) {
 // Remove function
 template<class T>
 void ChunkList<T>::Remove(T value) {
+    Node* current = head;
+    Node* previous = nullptr;
 
+    while (current != nullptr) {
+        // Case 1: Look in current node
+        for (int i = 0; i < current->len; ++i) {
+            if (current->values[i] == value) {
+
+                // Case 2: If in current node, shift
+                for (int j = i; j < current->len - 1; ++j) {
+                    current->values[j] = current->values[j + 1];
+                }
+
+                current->len--; // decrease len
+                listLen--;
+
+                // Case 3: Current node empty
+                if (current->len == 0) {
+                    // Case 3.1: Node not head
+                    if (previous != nullptr) {
+                        previous->next = current->next;
+                    }
+                    // Case 3.2: Node is head
+                    else {
+                        head = current->next;
+                    }
+
+                    // Case 3.3: Node is tail
+                    if (current == tail) {
+                        tail = previous;
+                    }
+
+                    delete current;
+                    numChunks--;
+                }
+
+                return;
+            }
+        }
+
+        // Move to the next node
+        previous = current;
+        current = current->next;
+    }
 }
+
 
 // GetLength function
 template<class T>
