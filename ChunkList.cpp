@@ -42,7 +42,7 @@ void ChunkList<T>::Remove(T value) {
 // GetLength function
 template<class T>
 int ChunkList<T>::GetLength() {
-
+    return listLen;
 }
 
 // LoadFactor function
