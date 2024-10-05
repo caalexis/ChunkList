@@ -20,8 +20,7 @@ template<class T>
 ChunkList<T>::ChunkList(T arr[], int arrLen) {
     // Case: Invalid array len
     if (arrLen <= 0) {
-        std::cerr << "Error: Invalid length" << std::endl;
-        return;
+        throw InvalidArrayLength();  // Throw the expected exception
     }
 
     // Initialize variables
