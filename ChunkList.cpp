@@ -18,14 +18,52 @@ ChunkList<T>::ChunkList() {
 // Parameterized Constructor
 template<class T>
 ChunkList<T>::ChunkList(T arr[], int arrLen) {
+    // Case: Invalid array len
+    if (arrLen <= 0) {
+        std::cerr << "Error: Invalid length" << std::endl;
+        return;
+    }
 
+    // Variables
+    head = nullptr;
+    tail = nullptr;
+    iterNode = nullptr;
+    arrPos = 0;
+    listLen = 0;
+    numChunks = 0;
+
+    // Add to list
+    for (int i = 0; i < arrLen; ++i) {
+        if (arrLen > ARRAY_SIZE) {
+            std::cout << "Debug: Split" << std::endl;
+        }
+        Append(arr[i]);
+    }
 }
+
 
 // Destructor
 template<class T>
 ChunkList<T>::~ChunkList() {
+    // temp pointer
+    Node* current = head;
 
+    // iterate through, delete nodes by deleting temp
+    while (current != nullptr) {
+        Node* temp = current;
+        current = current->next;
+        delete temp;
+
+        // bug check
+        std::cout << "Node deleted" << std::endl;
+    }
+
+    // RESET MEMEBER VARS
+    head = tail = iterNode = nullptr;
+    listLen = 0;
+    numChunks = 0;
 }
+
 
 // Append function
 template<class T>
