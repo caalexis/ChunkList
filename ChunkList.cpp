@@ -36,6 +36,9 @@ ChunkList<T>::ChunkList(T arr[], int arrLen) {
     for (int i = 0; i < arrLen; ++i) {
         Append(arr[i]);
     }
+
+    // Initialize iterator after adding elements
+    ResetIterator();
 }
 
 // Destructor
@@ -87,6 +90,11 @@ void ChunkList<T>::Append(T value) {
 // Remove function
 template<class T>
 void ChunkList<T>::Remove(T value) {
+    // Case: If the list is empty, throw exception
+    if (IsEmpty()) {
+        throw EmptyList();  // Ensure exception is thrown when list is empty
+    }
+
     Node* current = head;
     Node* previous = nullptr;
 
