@@ -1,0 +1,10 @@
+/Users/caitlin/Downloads/A2-ChunkList 2/cmake-build-debug/CMakeFiles/catch2_main.dir
+/Users/caitlin/Downloads/A2-ChunkList 2/cmake-build-debug/CMakeFiles/ChunkList_Driver.dir
+/Users/caitlin/Downloads/A2-ChunkList 2/cmake-build-debug/CMakeFiles/ChunkList_Test.dir
+/Users/caitlin/Downloads/A2-ChunkList 2/cmake-build-debug/CMakeFiles/Constructor_Test.dir
+/Users/caitlin/Downloads/A2-ChunkList 2/cmake-build-debug/CMakeFiles/Append_Remove_Test.dir
+/Users/caitlin/Downloads/A2-ChunkList 2/cmake-build-debug/CMakeFiles/Index_Test.dir
+/Users/caitlin/Downloads/A2-ChunkList 2/cmake-build-debug/CMakeFiles/Iterator_Test.dir
+/Users/caitlin/Downloads/A2-ChunkList 2/cmake-build-debug/CMakeFiles/Template_Test.dir
+/Users/caitlin/Downloads/A2-ChunkList 2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/caitlin/Downloads/A2-ChunkList 2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,123 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ChunkList",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Append_Remove_Test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Append_Remove_Test-Debug-4431c6847f3128949ec3.json",
+					"name" : "Append_Remove_Test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ChunkList_Driver::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ChunkList_Driver-Debug-660bc051245ee4ebd8af.json",
+					"name" : "ChunkList_Driver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ChunkList_Test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ChunkList_Test-Debug-f1124ee16c9583a0c94d.json",
+					"name" : "ChunkList_Test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Constructor_Test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Constructor_Test-Debug-c4cd8800b22cc62c8945.json",
+					"name" : "Constructor_Test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Index_Test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Index_Test-Debug-5beb3efc7f8d5994aab4.json",
+					"name" : "Index_Test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Iterator_Test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Iterator_Test-Debug-1c493a5d4fce39b615b2.json",
+					"name" : "Iterator_Test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Template_Test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Template_Test-Debug-efa9f41d7df6e51ebdb6.json",
+					"name" : "Template_Test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "catch2_main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-catch2_main-Debug-e831464e11b1a353300e.json",
+					"name" : "catch2_main",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/caitlin/Downloads/A2-ChunkList 2/cmake-build-debug",
+		"source" : "/Users/caitlin/Downloads/A2-ChunkList 2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
