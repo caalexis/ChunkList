@@ -48,7 +48,7 @@ int ChunkList<T>::GetLength() {
 // LoadFactor function
 template<class T>
 double ChunkList<T>::LoadFactor() {
-
+    return listLen / (numChunks * ARRAY_SIZE * 1.0);
 }
 
 // Contains function
@@ -78,6 +78,6 @@ T ChunkList<T>::GetNextItem() {
 // IsEmpty function
 template<class T>
 bool ChunkList<T>::IsEmpty() {
-
+    return listLen == 0; // Returns true if equal to 0
 }
 
